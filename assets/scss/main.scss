@@ -54,11 +54,17 @@ a {
   transition-duration: 0.2s;
   transition-timing-function: ease;
   color: #0c61e8;
-  text-decoration: none;
+  text-decoration: dotted underline;
 
-  &:hover, &:active {
+  &:hover, &:active, &:focus {
     color: darken(#0c61e8, 20%);
     text-decoration: underline;
+  }
+
+  i.fa-external-link {
+    text-decoration: none;
+    margin-left: 0.3em;
+    font-size: 0.75em;
   }
 }
 
@@ -72,6 +78,14 @@ a.btn {
   &:hover, &:active, &:focus {
     color: #fff;
     background-color: #000;
+  }
+}
+
+.admonition  a {
+  color: darken(#0c61e8, 25%);
+
+  &:hover, &:active, &:focus {
+    color: darken(#0c61e8, 35%);
   }
 }
 
@@ -288,6 +302,10 @@ header {
 
   nav {
     font-size: 1.1em;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   #search-container {
