@@ -1,16 +1,14 @@
 <footer>
-  <a href="https://notbyai.fyi" target="_blank">
-    <img src="https://notbyai.fyi/img/written-by-human-not-by-ai-black.svg"
-      loading="lazy" alt="Written by Human, Not by AI">
-  </a>
-  <p>
-    Find me around the web:
-    {{- range first 1 .Site.Menus.footer }}
-      <a href="{{ .URL }}" target="_blank"><b>{{ .Name }}</b></a>
-    {{- end }}
-    {{- range after 1 .Site.Menus.footer }}
-      | <a href="{{ .URL }}" target="_blank"><b>{{ .Name }}</b></a>
-    {{- end }}
+  <p class="links">
+    <a href="https://github.com/keenanschott" target="_blank" title="GitHub">
+      <i class="fa fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/keenanschott" target="_blank" title="LinkedIn">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a id="footer-email-link" href="mailto:keenanmschott28@gmail.com" target="_blank" style="text-decoration: none">
+      <i class="fa fa-envelope"></i>
+    </a>
   </p>
   <p>
     Built with <a href="https://gohugo.io/">Hugo</a> using
@@ -22,9 +20,7 @@
     theme.
   </p>
   <p>
-    &copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}"><b>{{ .Site.Title }}</b></a>.
-    This work is licensed under the
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.
+    &copy; {{ now.Year }} {{ .Site.Title }}. All Rights Reserved.
   </p>
 </footer>
 
@@ -36,3 +32,6 @@
         type="text/javascript">
 </script>
 <script type="text/javascript" defer src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+  document.getElementById('footer-email-link').href = 'mailto' + ':' + 'me' + '@' + 'sumnerevans.com';
+</script>
